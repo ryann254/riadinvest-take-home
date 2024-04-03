@@ -2,7 +2,6 @@ import { CollectionConfig } from 'payload/types';
 
 const Blog: CollectionConfig = {
   slug: 'blog',
-  auth: true,
   fields: [
     {
       name: 'title',
