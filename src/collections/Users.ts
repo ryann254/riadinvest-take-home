@@ -4,7 +4,9 @@ import { isAdminOrSelf } from '../access/isAdminOrSelf';
 
 const Users: CollectionConfig = {
   slug: 'users',
-  auth: true,
+  auth: {
+    depth: 0,
+  },
   admin: {
     useAsTitle: 'email',
   },

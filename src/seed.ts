@@ -3,8 +3,7 @@ import { User } from './payload-types';
 
 export const seed = async (payload: Payload): Promise<void> => {
   // This user will be created with the default role of `admin`
-  //@ts-ignore
-  await payload.create<User>({
+  await payload.create({
     collection: 'users',
     data: {
       email: 'dev.ryan@test.com',
@@ -14,13 +13,12 @@ export const seed = async (payload: Payload): Promise<void> => {
   });
 
   // This user will be created with the default role of `editor`
-  //@ts-ignore
-  await payload.create<User>({
+  await payload.create({
     collection: 'users',
     data: {
       email: 'test1.ryan@test.com',
       password: 'test',
-      sites: ['editor'],
+      roles: ['editor'],
     },
   });
 };
